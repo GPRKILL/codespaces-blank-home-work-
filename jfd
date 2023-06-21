@@ -1,0 +1,13 @@
+package com.example.exchange;
+
+public class StockExchange {
+    private Stock stock;
+
+    public StockExchange(Stock stock) {
+        this.stock = stock;
+    }
+
+    public void displayStockPrice() {
+        System.out.println("Cena akcji " + stock.getSymbol() + ": " + stock.getPrice());
+    }
+}

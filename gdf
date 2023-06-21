@@ -1,0 +1,19 @@
+package com.example;
+
+import com.example.exchange.Stock;
+import com.example.exchange.StockExchange;
+import com.example.trader.Trader;
+
+public class Main {
+    public static void main(String[] args) {
+        Stock stock = new Stock("AAPL", 150.25);
+        StockExchange stockExchange = new StockExchange(stock);
+        Trader trader = new Trader("John", stockExchange);
+
+        trader.buyStock();
+        trader.sellStock();
+        stock.updatePrice(155.50);
+        trader.buyStock();
+        trader.sellStock();
+    }
+}
